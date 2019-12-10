@@ -46,26 +46,24 @@ Executors/schedulers typically do not expose the shell to the user. For scripts 
    > Note: Script metadata files tell Lawnchair where to find scripts. They also describe information about the scripts like author, friendly name, version and the path to the script. These metadata files do not have to exist in the same location as your scripts, they could be on a completely different drive or UNC path if needed.
 2. Set up the folder structure however you like.
    > Note: By default, folder names dictate the categorie names you see in Lawnchair. For instance, if you place a `lawnchair_metadata.json` file in `\My PowerShell Scripts\testing` the category for whatever scripts that file describes will be `My Powershell Scripts\testing`. This behavior can be overridden if desired.
-3. Create one or more metadata files using the below templates. Save them files anywhere in your metadata repo with filenames of `lawnchair_metadata.json`
-   > Note: Lawnchair by default looks for metadata files with the filename `lawnchair_metadata.json`. If this needs to be changed to something else, look at the settings file created by Lawnchair upon first run (more on that on step #5)  
+3. Create one or more metadata files using the below templates. Save the files anywhere in your metadata repo with filenames of `lawnchair_metadata.json`
+   > Note: Lawnchair by default looks for metadata files with the filename `lawnchair_metadata.json`. If this needs to be changed to something else look at the settings file created by Lawnchair upon first run (more on that on step #5)  
    
    > Note: A metadata file is not limited to a single script. If you wanted to define multiple scripts you can (example is below). This is useful for scripts that share something in common or that you want to manage with a minimal set of metadata files.
    
 #### PowerShell example
 ```
-[
-  {
-    "Author": "the name of the script author",
-    "Category": "@category",
-    "Comments": "These are comments the script author would create.",
-    "Name": "a friendly name for your script",
-    "ScriptArguments": "-ExecutionPolicy unrestricted -NoProfile -File \"@scriptFullPath\"",
-    "ScriptExecutor": "powershell",
-    "ScriptRelativePath": "\\script.ps1",
-    "ScriptRootPath": "@scriptRootPath",
-    "Version": "1.1"
-  }
-]
+{
+  "Author": "the name of the script author",
+  "Category": "@category",
+  "Comments": "These are comments the script author would create.",
+  "Name": "a friendly name for your script",
+  "ScriptArguments": "-ExecutionPolicy unrestricted -NoProfile -File \"@scriptFullPath\"",
+  "ScriptExecutor": "powershell",
+  "ScriptRelativePath": "\\script.ps1",
+  "ScriptRootPath": "@scriptRootPath",
+  "Version": "1.1"
+}
 ```
 #### Python example
 ```
