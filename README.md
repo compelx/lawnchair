@@ -15,7 +15,7 @@ I needed a way to get less-technical admins to run PowerShell scripts we wrote a
 
 ### How?
 
-1. Lawnchair can look at one or more paths for scripts (eg. local paths, mapped drive, UNC paths)
+1. Lawnchair can look at one or more paths for metadata (eg. local paths, mapped drive, UNC paths)
 2. Lawnchair discovers JSON metadata files
 3. These metadata files contain information like script friendly names, version, author, paths, etc
 4. This metadata becomes searchable in a fairly intuitive interface
