@@ -120,7 +120,7 @@ Executors/schedulers typically do not expose the shell to the user. For scripts 
 | ScriptRootPath | String | The first half of the path to the script. If set to `@scriptRootPath` Lawnchair will substitute in the folder path to the metadata file. You can change this to another path (useful if your metadata files do not exist in the same repo your scripts do). For instance, `ScriptRootPath` set to `c:\\temp` and `ScriptRelativePath` set to `\\testing\\script.ps1` will result in a call to PowerShell with a script path of `c:\temp\testing\script.ps1` |
 | Version | String | A simple version number |
 
-4. Download the latest Lawnchair executable. See the releases page here.
+4. Download the latest Lawnchair executable. See the [releases page here](https://github.com/compelx/lawnchair/releases/tag/20191210001) .
 5. Run Lawnchair - it will prompt you to select the location of your metadata folder.
    Lawnchair will recursively search that folder (and child folders) for metadata files.
    > Note: If you have multiple metadata repositories then edit `%localappdata%\lawnchair\settings.json` including an additional path in the `ScriptRepositoryPaths` array. If a `settings.json` already exists in `%localappdata%\lawnchair` then Lawnchair will use it instead -- this is useful for predefining settings for other users although you will need to figure out a way to not only deliver the Lawnchair executable to them but also create the folder `%localappdata%\lawnchair` and copy the predefined `settings.json` into it.
