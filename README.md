@@ -19,7 +19,7 @@ I needed a way to get less-technical admins to run PowerShell scripts we wrote a
 2. Lawnchair discovers JSON metadata files
 3. These metadata files contain information like script friendly names, version, author, paths, etc
 4. This metadata becomes searchable in a fairly intuitive interface
-5. The folder structure the scripts reside in determines the categories
+5. The folder structure the metadata resides in determines the categories
 6. Users can quickly search by a number of different fields for a script
 7. Users can double click or arrow to and press `ENTER` to launch the script
 8. Script author comments can be optionally presented before launching
