@@ -29,10 +29,10 @@ I needed a way to get less-technical admins to run PowerShell scripts we wrote a
 #### Why does't Lawnchair wrap a GUI around the scripts? (eg. Provide a results pane, grid view, etc)?
 Lawnchair's original scope was to find and launch scripts. The user experience during execution (and working with the results after) is deferred to the script authors. This is very much intentional as I've had to work with a myriad of different scripts/solutions from different authors that do not confirm to a single style or approach.
 
-Fun fact! Some tools, like SQL scripts manager (can do PowerShell and Python as well) (https://www.red-gate.com/products/dba/sql-scripts-manager/) offer functionality for working with script output/results and logging. If you're looking for something more than just a launcher, I recommend exploring SQL scripts manager.
+Fun fact! Some tools, like SQL scripts manager (https://www.red-gate.com/products/dba/sql-scripts-manager/) offer functionality for working with script output/results and logging. If you're looking for something more than just a launcher, I recommend exploring SQL scripts manager.
 
 #### Why use Lawnchair over ADO pipelines, Jenkins, Control-M, etc?
-Executors/schedulers typically do not expose the shell to the user. For scripts that prompt for input from the user *during* execution (not just at the beginning) wont work with these kinds of tools.
+Executors/schedulers typically do not expose the shell to the user. Scripts that prompt for input from the user *during* execution (not just at the beginning) wont work with these kinds of tools.
 
 ## Usage
 ### Requirements
@@ -45,7 +45,7 @@ Executors/schedulers typically do not expose the shell to the user. For scripts 
    
    > Note: Script metadata files tell Lawnchair where to find scripts. They also describe information about the scripts like author, friendly name, version and the path to the script. These metadata files do not have to exist in the same location as your scripts, they could be on a completely different drive or UNC path if needed.
 2. Set up the folder structure however you like.
-   > Note: By default, folder names dictate the categorie names you see in Lawnchair. For instance, if you place a `lawnchair_metadata.json` file in `\My PowerShell Scripts\testing` the category for whatever scripts that file describes will be `My Powershell Scripts\testing`. This behavior can be overridden if desired.
+   > Note: By default, folder names dictate the category names you see in Lawnchair. For instance, if you place a `lawnchair_metadata.json` file in `\My PowerShell Scripts\testing` the category for whatever scripts that file describes will be `My Powershell Scripts\testing`. This behavior can be overridden if desired.
 3. Create one or more metadata files using the below templates. Save the files anywhere in your metadata repo with filenames of `lawnchair_metadata.json`
    > Note: Lawnchair by default looks for metadata files with the filename `lawnchair_metadata.json`. If this needs to be changed to something else look at the settings file created by Lawnchair upon first run (more on that on step #5)  
    
